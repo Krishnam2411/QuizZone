@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* fonts */
+@font-face {
+  font-family: montserrat;
+  src: url(../fonts/Montserrat.ttf);
+}
+
+/* variables */
+:root {
+  --primary-color: #eff8e2;
+  --secondary-color: #050517;
+  --primary-accent-color: #cf5c36;
+  --secondary-accent-color: #5fa9d3;
+  --gradient: rgba(207, 91, 54, 0.8), rgba(5, 5, 21, 0.6);
+}
+
+/* main page styling */
+body {
+  font-family: montserrat, cursive;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--primary-color);
+}
+p {
+  color: var(--primary-color);
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+#nav {
+  position: relative;
+  padding: 15px 50px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+#logo {
+  height: 3em;
+}
+#choose-category {
+  font-size: 3em;
+  text-align: center;
+}
+#Name {
+  font-weight: 600;
+  font-size: 3em;
+  color: var(--primary-accent-color);
+}
+#categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1vw 0;
+  padding: 45px 30px;
+  min-height: 20vh;
+}
+.category {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-weight: 550;
+  flex-basis: 30%;
+  font-size: 3em;
+  border-radius: 20px;
+  height: 230px;
+  margin: 10px;
+  padding: 10px;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* starting screen */
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--secondary-color);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 97%;
+  z-index: 10;
+}
+#logo {
+  height: 40vh;
+  filter: drop-shadow(0px 0px 80px var(--primary-color)) blur(1px);
+}
+#input {
+  display: flex;
+  gap: 1em;
+}
+.screenInput {
+  font-family: montserrat, cursive;
+  font-size: 3em;
+  font-weight: 700;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem 2.5rem;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  box-shadow: inset 0 0 25px var(--secondary-color);
+  box-shadow: inset 0 0 25px var(--secondary-color);
+  opacity: 70%;
+}
+.screenButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  opacity: 70%;
+  border: none;
+  border-radius: 20px;
+  box-shadow: inset 0 0 25px var(--secondary-color);
+  padding: 0 0.5em;
+  background-color: var(--secondary-accent-color);
+  color: var(--secondary-color);
+  width: fit-content;
+  cursor: pointer;
+}
+.big {
+  font-size: 5em;
+}
+
+/* category background image */
+#geography {
+  background: linear-gradient(var(--gradient)), url("../images/geography.jpg");
+  background-size: cover;
+}
+#science {
+  background: linear-gradient(var(--gradient)), url("../images/science.jpg");
+  background-size: cover;
+}
+#sports {
+  background: linear-gradient(var(--gradient)), url("../images/sports.jpg");
+  background-size: cover;
+}
+#technology {
+  background: linear-gradient(var(--gradient)), url("../images/technology.jpg");
+  background-size: cover;
+}
+#history {
+  background: linear-gradient(var(--gradient)), url("../images/history.jpg");
+  background-size: cover;
+}
+#literature {
+  background: linear-gradient(var(--gradient)), url("../images/literature.jpg");
+  background-size: cover;
+}
+
+/* media queries - responsiveness */
+@media (max-width: 1024px) {
+  #categories {
+    padding: 1.5em 1em;
+  }
+  .category {
+    font-size: 2.5em;
+    flex-basis: 44%;
+    height: 170px;
+  }
+  #logo {
+    height: 35vh;
+  }
+  #input {
+    justify-content: center;
+  }
+  .screenInput {
+    font-size: 2.5em;
+    width: 70%;
+  }
+}
+@media (max-width: 481px) {
+  body {
+    min-width: 300px;
+  }
+  #nav {
+    height: 6em;
+  }
+  #choose-category {
+    font-size: 2rem;
+  }
+  #Name {
+    font-size: 2.4rem;
+  }
+  #categories {
+    padding: 1em;
+    margin: 0.5em 0 2em 0;
+  }
+  .category {
+    font-size: 2em;
+    flex-basis: 100%;
+    height: 150px;
+  }
+  #input {
+    flex-direction: column;
+    align-items: center;
+  }
+  #logo {
+    height: auto;
+    width: 80%;
+  }
+  .screenInput {
+    font-size: 2em;
+    width: 60vw;
+  }
+}

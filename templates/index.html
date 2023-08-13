@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- title -->
+    <title>Quiz Zone - Tantalizing Trivia!</title>
+
+    <!-- Meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="Challenge your knowledge with our interactive quiz game. Share with your friends and have fun!">
+    <meta name="keywords" content="quiz, game, online, quizzone, trivia, interactive, webgame, questions, answers, nits, nit, silchar, krishnam, educational, fun, challenge, knowledge, learning, tantalizing trivia">
+    <meta name="author" content="krishnam">
+    <!-- Opengraph meta tags -->
+    <meta property="og:title" content="Quiz Zone - Tantalizing Trivia!">
+    <meta property="og:description" content="Challenge your knowledge with our interactive quiz game. Test yourself and have fun!">
+    <meta property="og:image" content="https://user-images.githubusercontent.com/124492864/260278768-1542f10f-f836-4155-b9f7-53743ec17d80.png">
+    <meta property="og:url" content="https://quizzone.pythonanywhere.com/">
+    <meta property="og:type" content="website">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/icon.png') }}" type="image/x-icon">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+</head>
+<body>
+    <div id="nav">
+        <span id="choose-category">Choose your category, </span>
+        <span id="Name"></span>
+    </div>
+    <div id="categories">
+        <a id="geography" class="category" href="{{ url_for('play', category = 'geography') }}">Geography</a>
+        <a id="science" class="category" href="{{ url_for('play', category = 'science') }}">Science</a>
+        <a id="history" class="category" href="{{ url_for('play', category = 'history') }}">History</a>
+        <a id="technology" class="category" href="{{ url_for('play', category = 'technology') }}">Technology</a>
+        <a id="sports" class="category" href="{{ url_for('play', category = 'sports') }}">Sports</a>
+        <a id="literature" class="category" href="{{ url_for('play', category = 'literature') }}">Films & Literature</a>
+    </div>
+    <div id="footer">
+        <a href="https://github.com/Krishnam2411"><p>Made with ♥️ by Krishnam2411</p></a>
+    </div>
+    <!-- script -->
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>

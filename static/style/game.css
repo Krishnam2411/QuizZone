@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* fonts */
+@font-face {
+  font-family: montserrat;
+  src: url(../fonts/Montserrat.ttf);
+}
+
+/* variables */
+:root {
+  --primary-color: #eff8e2;
+  --secondary-color: #050517;
+  --primary-accent-color: #cf5c36;
+  --secondary-accent-color: #5fa8d3;
+  --right-color: rgb(58, 223, 58);
+  --wrong-color: rgb(238, 53, 53);
+}
+
+/* animation */
+@keyframes timeUp {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: rotate(10deg);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: rotate(-10deg);
+  }
+}
+
+body {
+  width: calc(100vw-2em);
+  height: calc(100vh-2em);
+  background-color: var(--primary-color);
+  margin: 1em;
+  font-family: montserrat, cursive;
+}
+.Name {
+  color: var(--primary-accent-color);
+}
+.correct {
+  background-color: var(--right-color) !important;
+  color: var(--primary-color);
+}
+.incorrect {
+  background-color: var(--wrong-color) !important;
+  color: var(--primary-color);
+}
+
+/* Game layout */
+#game {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--primary-accent-color);
+  border-radius: 10px;
+  margin: 3em 6em;
+  padding: 1em;
+}
+#player {
+  font-size: 2.5em;
+  position: relative;
+  top: -0.2em;
+}
+#header {
+  display: flex;
+  min-height: 100px;
+  justify-content: space-between;
+}
+#question {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3em 0.5em;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 8px;
+  width: 80%;
+  font-family: montserrat, cursive;
+  font-weight: 500;
+  font-size: 2.5em;
+}
+#info {
+  display: flex;
+  flex-direction: column;
+  max-height: 8em;
+  width: 25%;
+  margin: 1em 0.5em;
+}
+#timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+#alarm {
+  height: 100%;
+  position: relative;
+  top: -0.3em;
+}
+#time {
+  position: absolute;
+  font-family: "Arial Narrow Bold", sans-serif;
+  font-size: 3.3em;
+  font-weight: 700;
+  color: var(--primary-color);
+  z-index: 5;
+}
+.timeUp {
+  animation: timeUp 1s 1;
+}
+#lives {
+  display: flex;
+  justify-content: center;
+  height: 2.4em;
+}
+#heart {
+  height: 100%;
+}
+#options {
+  display: flex;
+  flex-direction: column;
+}
+.option {
+  font-family: montserrat, cursive;
+  font-weight: 500;
+  padding: 0.5em;
+  margin: 0.2em 0.8em;
+  max-width: 70%;
+  background-color: var(--secondary-accent-color);
+  color: var(--secondary-color);
+  font-size: 2em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.option:hover {
+  background-color: var(--primary-accent-color);
+  color: var(--primary-color);
+}
+#score {
+  margin-top: 0.5rem;
+  padding: 0.5em 0;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+/* screens before & after game */
+.startScreen {
+  display: grid;
+  place-content: center;
+  background-color: var(--secondary-color);
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 95%;
+}
+.screen {
+  display: grid;
+  place-content: center;
+  background-color: var(--secondary-color);
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 90%;
+  z-index: 10;
+}
+.start {
+  font-size: 4rem;
+  padding: 1em 2em;
+}
+.Button {
+  font-family: montserrat, cursive;
+  font-weight: 500;
+  font-size: 2em;
+  border: 3px solid var(--secondary-color);
+  border-radius: 20px;
+  padding: 0.5em;
+  margin: 1em auto 0 auto;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  width: fit-content;
+  cursor: pointer;
+}
+.screenMessage {
+  font-family: montserrat, cursive;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 3em;
+}
+.big {
+  font-size: 5em;
+}
+.highlight {
+  color: var(--secondary-accent-color);
+}
+
+/* media queries - responsiveness */
+@media (max-width: 1024px) {
+  #game {
+    margin: 1.5em 3em;
+  }
+  #header {
+    min-height: 80px;
+  }
+  #question {
+    font-size: 2em;
+  }
+  #info {
+    width: 20%;
+    gap: 0.4em;
+  }
+  #time {
+    font-size: 2.5em;
+  }
+  #timer {
+    height: 70%;
+  }
+  #lives {
+    height: 1.6em;
+  }
+  .option {
+    padding: 0.3em;
+    margin: 0.2em 1.2em;
+    font-size: 1.7em;
+  }
+  #score {
+    font-size: 2em;
+  }
+}
+@media (max-width: 481px) {
+  #game {
+    margin: 1vw;
+  }
+  #header {
+    min-height: 80px;
+    gap: 1em;
+  }
+  #question {
+    font-size: 1.6em;
+    padding: 0.2em 0.3em;
+    font-weight: 450;
+  }
+  #info {
+    width: 10%;
+  }
+  #timer {
+    height: 50%;
+    gap: 0.2em;
+  }
+  #time {
+    font-size: 2em;
+  }
+  #lives {
+    height: 1.4em;
+  }
+  .option {
+    padding: 0.2em;
+    margin: 0.3em 1.2em;
+    font-size: 1.7em;
+  }
+  #score {
+    font-size: 2em;
+  }
+  .screenMessage {
+    font-size: 2em;
+  }
+  .big {
+    font-size: 3.5em;
+  }
+}

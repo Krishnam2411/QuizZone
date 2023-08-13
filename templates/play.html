@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- title -->
+    <title>Quiz Zone - Tantalizing Trivia!</title>
+
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/icon.png') }}" type="image/x-icon">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/game.css') }}">
+</head>
+<body>
+    <img src="{{ url_for('static', filename='images/player.png')}}" id="playerIcon">
+    <span id="player"></span>
+    <div id="variable" data-questions="{{ questions }}"></div> <!-- Questions data - later to be accessed using JS -->
+    <div id="game">
+        <div id="header">
+            <div id="question"></div>
+            <div id="info">
+                <div id="timer"><img id="alarm" src="{{ url_for('static', filename='images/alarm.png') }}"><span id="time"></span></div>
+                <div id="lives">lives</div>
+            </div>
+        </div>
+        <div id="options">
+            <button id="Option1" class="option"></button>
+            <button id="Option2" class="option"></button>
+            <button id="Option3" class="option"></button>
+            <button id="Option4" class="option"></button>
+        </div>
+        <div id="score">scores</div>
+    </div>
+    <!-- game script -->
+    <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
