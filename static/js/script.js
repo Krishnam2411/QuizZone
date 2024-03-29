@@ -21,7 +21,7 @@ const category = url[url.length - 1];
 let questionSet;
 
 // fetch questions
-fetch(`http://127.0.0.1:5000/api/${category}`)
+fetch(`https://quizzone.onrender.com/api/${category}`)
   .then((response) => response.json())
   .then((data) => {
     questionSet = data.response;
