@@ -1,7 +1,9 @@
 from flask import Flask, render_template, jsonify
-from data import *
+from flask_cors import CORS
+from data import get_questions 
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def index():
