@@ -1,5 +1,7 @@
+from random import sample 
+
 def get_questions(x):
-    questions = category[x]
+    questions = sample(category[x], 10)
     return questions
 
 category = {

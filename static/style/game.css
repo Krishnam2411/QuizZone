@@ -69,7 +69,7 @@ body {
   flex-direction: column;
   border: 2px solid var(--primary-accent-color);
   border-radius: 10px;
-  margin: 3em 6em;
+  margin: 3em 2vw;
   padding: 1em;
 }
 #player {
@@ -81,6 +81,7 @@ body {
   display: flex;
   min-height: 100px;
   justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 #question {
   display: flex;
@@ -140,8 +141,9 @@ body {
   font-family: montserrat, cursive;
   font-weight: 500;
   padding: 0.5em;
-  margin: 0.2em 0.8em;
-  max-width: 70%;
+  margin: 0.2em 0;
+  width: 100%;
+  /* max-width: 70%; */
   background-color: var(--secondary-accent-color);
   color: var(--secondary-color);
   font-size: 2em;
@@ -215,41 +217,14 @@ body {
 }
 
 /* media queries - responsiveness */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   #game {
-    margin: 1.5em 3em;
-  }
-  #header {
-    min-height: 80px;
-  }
-  #question {
-    font-size: 2em;
-  }
-  #info {
-    width: 20%;
-    gap: 0.4em;
-  }
-  #time {
-    font-size: 2.5em;
-  }
-  #timer {
-    height: 70%;
-  }
-  #lives {
-    height: 1.6em;
-  }
-  .option {
-    padding: 0.3em;
-    margin: 0.2em 1.2em;
-    font-size: 1.7em;
-  }
-  #score {
-    font-size: 2em;
+    margin: 0.5em 1em;
   }
 }
-@media (max-width: 481px) {
+@media (max-width: 425px) {
   #game {
-    margin: 1vw;
+    margin: 1em 0.3em;
   }
   #header {
     min-height: 80px;
@@ -275,10 +250,11 @@ body {
   }
   .option {
     padding: 0.2em;
-    margin: 0.3em 1.2em;
+    margin: 0.2em 0;
     font-size: 1.7em;
   }
   #score {
+    margin-top: 0.3rem;
     font-size: 2em;
   }
   .screenMessage {
