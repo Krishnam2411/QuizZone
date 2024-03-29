@@ -31,9 +31,10 @@ Welcome to QuizZone, a web-based quiz game developed using Flask, where users ca
 ## Screenshots
 
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/Krishnam2411/QuizZone/assets/124492864/2a0d966e-e7c4-47e1-833b-fc823e6c6574)
+![App Screenshot](https://github.com/Krishnam2411/QuizZone/assets/124492864/713f4c37-4509-42bb-83b4-a1b1aa5a5025)
+![App Screenshot](https://github.com/Krishnam2411/QuizZone/assets/124492864/f40832d1-40fd-4925-84e2-c70e7c6fc771)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 ## Run Locally
 1. Clone the project
