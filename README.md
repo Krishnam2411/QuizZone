@@ -21,7 +21,7 @@ Welcome to QuizZone, a web-based quiz game developed using Flask, where users ca
 
 
 ## Demo
-1. Access the game in your web browser at https://quizzone.pythonanywhere.com/
+1. Access the game in your web browser at /https://quizzone.onrender.com/
 2. Enter your name.
 3. Select a quiz category.
 4. Answer the questions
